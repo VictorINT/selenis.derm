@@ -111,7 +111,6 @@ body::after {
   background: none;
   clip-path: none;
 }
-.eyebrow { color: var(--primary-700); font-weight: 700; margin: 0 0 0.25rem; text-transform: uppercase; font-size: 0.85rem; }
 .hero-inner h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0 0 0.5rem; }
 .hero-inner p { color: var(--muted); margin: 0 0 1rem; max-width: 60ch; }
 .hero-cta { display: flex; gap: 0.75rem; }
@@ -265,12 +264,13 @@ input:focus, select:focus, textarea:focus {
   .container { width: min(1100px, 90%); }
   .grid { grid-template-columns: 1fr; }
   .benefits { grid-template-columns: 1fr; }
-  .hero { padding: 3.5rem 0 2.5rem; }
+  .hero { padding: 3.5rem 0 2.5rem; text-align: center; }
   .hero-inner h1 { font-size: clamp(1.5rem, 6vw, 2rem); }
-  .hero-cta { flex-direction: column; width: 100%; }
-  .hero-cta .btn { width: 100%; justify-content: center; }
+  .hero-inner p { margin: 0 auto 1rem; }
+  .hero-cta { flex-direction: column; width: 100%; align-items: center; }
+  .hero-cta .btn { width: 100%; max-width: 280px; justify-content: center; }
   .section { padding: 2rem 0; }
-  .section h2 { font-size: 1.25rem; }
+  .section h2 { font-size: 1.25rem; text-align: center; }
   .card { padding: 0.9rem; }
   .benefit { grid-template-columns: 48px 1fr; gap: 0.65rem; }
   .benefit .icon { width: 48px; height: 48px; font-size: 1.1rem; }
