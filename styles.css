@@ -111,8 +111,12 @@ body::after {
   background: none;
   clip-path: none;
 }
+.hero-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
 .hero-inner h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0 0 0.5rem; }
-.hero-inner p { color: var(--muted); margin: 0 0 1rem; max-width: 60ch; }
+.hero-inner p { color: var(--muted); margin: 0 0 1rem; }
 .hero-cta { display: flex; gap: 0.75rem; }
 
 /* Secțiuni */
@@ -227,11 +231,17 @@ input:focus, select:focus, textarea:focus {
 /* Butoane */
 .btn {
   display: inline-flex; align-items: center; justify-content: center;
-  padding: 0.6rem 0.9rem; border-radius: 0.55rem;
+  padding: 1rem 2rem; border-radius: 0.55rem;
   border: 1px solid #d1d5db; background: var(--bg); color: var(--text);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  min-height: 48px;
 }
 .btn.primary { background: var(--primary); border-color: var(--primary); color: #fff; box-shadow: 0 6px 16px rgba(95,168,255,0.25); }
 .btn.primary:hover { background: var(--primary-700); border-color: var(--primary-700); box-shadow: 0 10px 24px rgba(59,125,214,0.25); }
+.btn:hover { background: rgba(95,168,255,0.1); border-color: var(--primary); }
 
 /* CTA */
 .cta { background: var(--surface); }
@@ -262,14 +272,31 @@ input:focus, select:focus, textarea:focus {
 }
 @media (max-width: 640px) {
   .container { width: min(1100px, 90%); }
+  .hero { padding: 2.5rem 1rem 2rem; }
+  .hero-inner { 
+    max-width: 100%;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  .hero-inner h1 { font-size: clamp(1.3rem, 5vw, 1.8rem); margin: 0 0 0.75rem; }
+  .hero-inner p { font-size: 0.95rem; margin: 0 0 1.25rem; }
+  .hero-cta { 
+    flex-direction: column; 
+    width: 100%; 
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .hero-cta .btn { 
+    width: 100%; 
+    max-width: 100%;
+    min-height: 48px;
+    padding: 1rem 1.5rem;
+    font-size: 0.95rem;
+  }
+  
   .grid { grid-template-columns: 1fr; }
   .benefits { grid-template-columns: 1fr; }
-  .hero { padding: 3.5rem 0 2.5rem; text-align: center; }
-  .hero-inner h1 { font-size: clamp(1.5rem, 6vw, 2rem); }
-  .hero-inner p { margin: 0 auto 1rem; }
-  .hero-cta { flex-direction: column; width: 100%; align-items: center; }
-  .hero-cta .btn { width: 100%; max-width: 280px; justify-content: center; }
-  .section { padding: 2rem 0; }
+  .section { padding: 2rem 1rem; }
   .section h2 { font-size: 1.25rem; text-align: center; }
   .card { padding: 0.9rem; }
   .benefit { grid-template-columns: 48px 1fr; gap: 0.65rem; }
