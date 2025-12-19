@@ -19,6 +19,11 @@ body {
   color: var(--text);
   background: linear-gradient(180deg, #f7fbff, #ffffff);
   line-height: 1.6;
+  overflow-x: hidden;
+}
+
+body.nav-open {
+  overflow: hidden;
 }
 h1, h2, h3 { letter-spacing: -0.01em; }
 img { max-width: 100%; display: block; }

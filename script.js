@@ -13,6 +13,7 @@ if (navToggle && siteNav) {
   navToggle.addEventListener('click', () => {
     const open = siteNav.classList.toggle('open');
     navToggle.classList.toggle('open');
+    document.body.classList.toggle('nav-open', open);
     navToggle.setAttribute('aria-expanded', String(open));
   });
   
@@ -21,6 +22,7 @@ if (navToggle && siteNav) {
     if (e.target === siteNav || e.target.tagName === 'A') {
       siteNav.classList.remove('open');
       navToggle.classList.remove('open');
+      document.body.classList.remove('nav-open');
       navToggle.setAttribute('aria-expanded', 'false');
     }
   });
