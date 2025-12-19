@@ -12,7 +12,10 @@
 
 /* Reset de bază */
 * { box-sizing: border-box; }
-html, body { height: 100%; }
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
 body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
@@ -33,7 +36,7 @@ main, .site-header, .site-footer { position: relative; z-index: 1; }
 body::after {
   content: "";
   position: fixed;
-  inset: -20vh -20vw;
+  inset: 0;
   background:
     radial-gradient(38% 38% at 12% 18%, rgba(95,168,255,0.22), rgba(95,168,255,0) 60%),
     radial-gradient(42% 42% at 82% 10%, rgba(171,205,255,0.24), rgba(171,205,255,0) 60%),
@@ -103,6 +106,7 @@ body::after {
   transform: translateX(-50%);
   background: radial-gradient(ellipse at center, rgba(33,83,163,0.25), rgba(33,83,163,0) 60%);
   pointer-events: none;
+  overflow: hidden;
 }
 .hero::after {
   content: "";
@@ -114,6 +118,8 @@ body::after {
 .hero-inner {
   max-width: 600px;
   margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
 }
 .hero-inner h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0 0 0.5rem; }
 .hero-inner p { color: var(--muted); margin: 0 0 1rem; }
