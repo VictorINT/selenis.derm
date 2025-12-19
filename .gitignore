@@ -1,0 +1,20 @@
+# Sistem / OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Editoare
+.vscode/
+.idea/
+
+# Loguri
+*.log
+
+# Build/artefacte (dacă apar)
+dist/
+coverage/
+node_modules/
+
+# Mediu
+.env
